@@ -1,0 +1,8 @@
+h1 {
+  color: var(--bright-blue);
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--gray-700);
+}

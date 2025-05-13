@@ -215,7 +215,7 @@
             x2="982"
             y1="192"
             y2="192"
-            gradientUnits="userSpaceOnUse"
+            gradient-units="userSpaceOnUse"
           >
             <stop stop-color="#F0060B" />
             <stop offset="0" stop-color="#F0070C" />
@@ -258,6 +258,9 @@
             </svg>
           </a>
         }
+        <a class="pill" routerLink="/example">
+          <span>Example Page</span>
+        </a>
       </div>
       <div class="social-links">
         <a
@@ -322,6 +325,16 @@
       </div>
     </div>
   </div>
+  <form>
+    {{ person.name }}
+    <label for="name">Name:</label>
+    <input id="name" type="text" [(ngModel)]="person.name" name="name" />
+
+    <label for="age">Age:</label>
+    <input id="age" type="number" [(ngModel)]="person.age" name="age" />
+
+    <button type="button" (click)="onButtonClick()">Submit</button>
+  </form>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
