@@ -1,2 +1,9 @@
 <h1>Welcome to the Example Page!</h1>
 <p>This is the content of the Example component.</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name" name="name" />
+  <input type="email" formControlName="email" name="email" />
+  <input type="text" formControlName="identification" name="identification" />
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
